@@ -61,15 +61,7 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
-SOCIALACCOUNT_PROVIDERS = {
-    'facebook': {
-        'APP': {
-            'client_id': '2d67617a4f733d167ae9',
-            'secret': '0252b242986cb9aaae35560d2eabb99ba7566d7b',
-            'key': ''
-        }
-    }
-}
+
 #LOGIN_URL = '/admin/'
 LOGIN_REDIRECT_URL = '/posts'
 

@@ -48,6 +48,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.user.username}-{self.created.strftime('%d-%m-%Y')}"
+    
     def get_absolute_ur(self):
         return reverse("profiles:profile-detail-view", kwargs={"slug": self.slug})
 
