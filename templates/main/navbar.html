@@ -46,8 +46,8 @@
               </div>
           
               <a href="{{path_to_my_profile}}" class="{% if request.path == path_to_my_profile %}active{% endif %} item">
-                <img src="{{picture.url}}" class="ui avatar image">&nbsp;
-                   {{ request.user }}
+                <img src="{{picture.url}}" alt="" class="ui avatar image">&nbsp;
+                   {{ request.user }} 
               </a>
   
               <a href="{% url 'account_logout' %}" class="ui item">
