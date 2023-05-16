@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!k_9e9t=erf4#n#*3clxjr9gn4t6s)6#v!dntkc&!%&_gx)lud
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://social-app-production-140c.up.railway.app/']
+ALLOWED_HOSTS = ['*']
 import os
 
 # Application definition
@@ -73,7 +73,7 @@ ACCOUNT_EMAIL_UNIQUE = True
 if DEBUG:
    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
-CSRF_TRUSTED_ORIGINS = ['https://social-app-production-140c.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['*']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
