@@ -73,7 +73,7 @@ ACCOUNT_EMAIL_UNIQUE = True
 if DEBUG:
    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
-
+CSRF_TRUSTED_ORIGINS = ['*']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
