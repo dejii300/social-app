@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-!k_9e9t=erf4#n#*3clxjr9gn4t6s)6#v!dntkc&!%&_gx)lud
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-import os
+
 
 # Application definition
 
@@ -68,12 +69,17 @@ LOGIN_REDIRECT_URL = '/posts'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_UNIQUE = True
-#ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 if DEBUG:
    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
-CSRF_TRUSTED_ORIGINS = ['*']
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'uzomachimdindu300@gmail.com'
+EMAIL_HOST_PASSWORD =''
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -174,3 +180,6 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'socialnet', 'static_cdn', 
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CSRF_TRUSTED_ORIGINS = [
+    'https://social-app-production-140c.up.railway.app'
+]
