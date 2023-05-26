@@ -4,6 +4,7 @@ creat a post,
 delete his/her post,
 like a post,
 unlike a post
+comment on post
 send a friend request,
 accept a friend request,
 remove friend from friends list,
